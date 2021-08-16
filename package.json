@@ -1,0 +1,29 @@
+{
+  "name": "@swiftcomplete/reverse-geocode",
+  "version": "1.0.0",
+  "description": "Reverse Geocoding wrapper for the Swiftcomplete Places API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swiftcomplete-public/reverse-geocode.git"
+  },
+  "keywords": [
+    "reverse",
+    "geocode",
+    "latitude",
+    "longitude",
+    "lat",
+    "long",
+    "address",
+    "geocoding"
+  ],
+  "author": "Swiftcomplete <hello@swiftcomplete.com> (https://www.swiftcomplete.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/swiftcomplete-public/reverse-geocode/issues"
+  },
+  "homepage": "https://github.com/swiftcomplete-public/reverse-geocode#readme"
+}
