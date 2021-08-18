@@ -1,4 +1,4 @@
-# reverse-geocode
+# Swiftcomplete Reverse Geocoding
 ## Description
 This package provides reverse geocoding using the **[Swiftcomplete Places API](https://www.swiftcomplete.com/places/address-autocomplete/)**.
 
@@ -21,22 +21,97 @@ const swiftcompleteReverseGeocoder = require('@swiftcomplete/reverse-geocode');
 
 swiftcompleteReverseGeocoder.setAPIKey('INSERT-KEY-HERE');
 
-swiftcompleteReverseGeocoder.reverseGeocode('52.955771,-1.142881').then(function(results) {
+swiftcompleteReverseGeocoder.reverseGeocode('51.499403,-0.127362').then(function(results) {
+    console.log(results);
+});
+```
+
+## Response
+```json
+[
+  {
+    "primary":{
+      "text":"Westminster Abbey",
+      "highlights":[]
+    },
+    "secondary":{
+      "text":"London",
+      "highlights":[]
+    },
+    "type":"address.residential.building.data.emptyroad",
+    "isContainer":false,
+    "geometry":{
+      "centre":{
+        "lat":51.499462,
+        "lon":-0.127448,
+        "type":"address"
+      }
+    },
+    "distance":{
+      "units":"m",
+      "measurement":9,
+      "type":"biasTowards",
+      "geometry":{
+        "centre":{
+          "lat":51.499403,
+          "lon":-0.127362
+        }
+      }
+    },
+    "populatedRecord":{
+      "lines":[
+        "Westminster Abbey",
+        "",
+        "London",
+        "SW1P 3PA",
+        "United Kingdom"
+      ],
+      "label":"Westminster Abbey\nLondon\nSW1P 3PA\nUnited Kingdom"
+    }
+  }
+]
+```
+
+## Response field descriptions
+
+- primary.text - A simple description of the address, usually the building & street
+- secondary.text - A simple description of the location, usually the city
+- geometry.centre - The coordinates of the address
+- geometry.centre.type - The accuracy of the coordinates, either "address", "street" or "postcode"
+- distance - How far the address is from your coordinates
+- distance.geometry.centre - Your original coordinates
+- populatedRecord.lines - The fully formatted postal address, line by line
+- populatedRecord.label - The fully formatted postal address, in a simple label format
+
+## Customising the response
+
+It's possible to pass in an optional options object to customise the response. Each field is optional within the object:
+
+- maxResults - Max number of results to return (up to 5, default: 1). Note that you are billed per result, so 4 results = 4 charges.
+- distanceUnits - Unit of measurement to display how far away the address is from your coordinate ("metric", "imperial", "m", "km", "ft", "mi", default: "metric")
+
+```js
+const swiftcompleteReverseGeocoder = require('@swiftcomplete/reverse-geocode');
+
+swiftcompleteReverseGeocoder.setAPIKey('INSERT-KEY-HERE');
+
+swiftcompleteReverseGeocoder.reverseGeocode('51.499403,-0.127362', {
+    maxResults: 5,
+    distanceUnits: "ft"
+}).then(function(results) {
     console.log(results);
 });
 ```
 
 ## Data coverage
 
-Swiftcomplete reverse geocoding is currently available in the following countries:
+Swiftcomplete reverse geocoding is currently available in the United Kingdom. We'll be adding the following countries shortly:
 
 - Denmark
 - France
 - Liechtenstein
 - Luxembourg
 - Norway
-- United Kingdom
-
 
 We regularly update and expand our data coverage - **[contact us](https://www.swiftcomplete.com/contact-us/)** if there's a country or dataset that isn't listed and we'll let you know where it is on our priority list.
 
