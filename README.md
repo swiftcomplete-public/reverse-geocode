@@ -105,7 +105,7 @@ swiftcompleteReverseGeocoder.reverseGeocode('51.499403,-0.127362', {
 
 ## Data coverage
 
-Swiftcomplete reverse geocoding is currently available in the United Kingdom. We'll be adding the following countries shortly:
+Swiftcomplete reverse geocoding is currently available in Great Britain. We'll be adding the following countries shortly:
 
 - Denmark
 - France
