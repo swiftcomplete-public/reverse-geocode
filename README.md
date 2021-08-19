@@ -1,4 +1,10 @@
-# Swiftcomplete Reverse Geocoding
+# @swiftcomplete/reverse-geocode
+
+[![npm](https://img.shields.io/npm/v/@swiftcomplete/reverse-geocode.svg?style=flat-square "npm")](https://www.npmjs.com/package/@swiftcomplete/reverse-geocode)
+[![release](https://img.shields.io/github/release/swiftcomplete-public/reverse-geocode.svg?style=flat-square "release")](https://github.com/swiftcomplete-public/reverse-geocode)
+[![dependencies](https://david-dm.org/swiftcomplete-public/reverse-geocode.svg?style=flat-square "dependencies")](https://david-dm.org/swiftcomplete-public/reverse-geocode)
+[![license](http://img.shields.io/npm/l/@swiftcomplete/reverse-geocode.svg?style=flat-square "license")](https://github.com/swiftcomplete-public/reverse-geocode/blob/master/LICENSE)
+
 ## Description
 This package provides reverse geocoding using the **[Swiftcomplete Places API](https://www.swiftcomplete.com/places/address-autocomplete/)**.
 
