@@ -4,7 +4,7 @@
   "description": "Reverse Geocoding wrapper for the Swiftcomplete Places API",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/swiftcomplete-public/reverse-geocode/issues"
   },
-  "homepage": "https://www.swiftcomplete.com/places/reverse-geocoding/"
+  "homepage": "https://www.swiftcomplete.com/places/reverse-geocoding/",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
 }
