@@ -158,14 +158,20 @@ exports.reverseGeocode = function (coordinate, options) {
             let parsedDistanceUnits = parseDistanceUnits(options.distanceUnits);
 
             if (parsedDistanceUnits.length > 0)
-                url += `&distanceUnits=${parsedDistanceUnits}`;
+                url += `&distanceUnits=${encodeURIComponent(parsedDistanceUnits)}`;
+        }
+
+        if ('groupByCompass' in options) {
+            let parsedGroupByCompass = options.groupByCompass == true;
+            
+            url += `&groupByCompass=${encodeURIComponent(parsedGroupByCompass)}`;
         }
 
         if ('maxResults' in options) {
-            let parsedMaxResults = parseInt(options.maxResults);
+            let parsedMaxResults = parseInt(encodeURIComponent(options.maxResults);
 
             if (!isNaN(parsedMaxResults) && parsedMaxResults >= 1 && parsedMaxResults <= 5)
-                url += `&maxResults=${parsedMaxResults}`;
+                url += `&maxResults=${encodeURIComponent(parsedMaxResults)}`;
         }
     }
 

@@ -93,8 +93,9 @@ swiftcompleteReverseGeocoder.reverseGeocode('51.499403,-0.127362').then(function
 
 It's possible to pass in an optional options object to customise the response. Each field is optional within the object:
 
-- maxResults - Max number of results to return (up to 5, default: 1). Note that you are billed per result, so 4 results = 4 charges.
 - distanceUnits - Unit of measurement to display how far away the address is from your coordinate ("metric", "imperial", "m", "km", "ft", "mi", default: "metric")
+- groupByCompass - Enabling groupByCompass returns addresses surrounding your coordinate, rather than just the closest. Useful to return an overview of an area and ignore several addresses that are grouped together (true, false, default: "false")
+- maxResults - Max number of results to return (up to 5, default: 1). Note that you are billed per result, so 4 results = 4 charges.
 
 ```js
 const swiftcompleteReverseGeocoder = require('@swiftcomplete/reverse-geocode');
