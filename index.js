@@ -163,12 +163,12 @@ exports.reverseGeocode = function (coordinate, options) {
 
         if ('groupByCompass' in options) {
             let parsedGroupByCompass = options.groupByCompass == true;
-            
+
             url += `&groupByCompass=${encodeURIComponent(parsedGroupByCompass)}`;
         }
 
         if ('maxResults' in options) {
-            let parsedMaxResults = parseInt(encodeURIComponent(options.maxResults);
+            let parsedMaxResults = parseInt(options.maxResults);
 
             if (!isNaN(parsedMaxResults) && parsedMaxResults >= 1 && parsedMaxResults <= 5)
                 url += `&maxResults=${encodeURIComponent(parsedMaxResults)}`;
