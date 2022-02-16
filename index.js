@@ -139,6 +139,7 @@ exports.setAPIKey = function (key) {
  * @param {string} coordinate A WGS84 coordinate, in the format "latitude,longitude"
  * @param {Object} options Optional options object
  * @param {("metric"|"imperial"|"m"|"km"|"ft"|"mi")} [options.distanceUnits="metric"] Unit of measurement to display how far away the address is from your coordinate
+ * @param {boolean} [options.groupByCompass=false] Prioritise addresses surrounding your coordinate in all directions, rather than just the closest. Useful to return an overview of an area and ignore several nearby addresses that are grouped together.
  * @param {number} [options.maxResults=1] Max number of results to return (up to 5). Note that you are billed per result, so 4 results = 4 charges.
  * @returns {Promise} Array of matching results
  */
